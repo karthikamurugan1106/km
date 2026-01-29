@@ -1,12 +1,15 @@
 on:
-push:
-branches: ["main"]
-pull_request:
-branches: ["main"]
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
 jobs:
-build:
-runs-on: ubuntu-latest
--name: checkout repository
-uses: actions/checkout@4
--name: displaymessage
-run: echo"github actions workflow is running successfully!"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display message
+        run: echo "GitHub Actions workflow is running successfully!"
