@@ -5,3 +5,7 @@ branches:[main"]
 jobs:
 build:
 runs-on:ubuntu-latest
+-name:checkout repository
+uses:actions/checkout@4
+-name:displaymessage
+run:echo"github actions workflow is running successfully!"
